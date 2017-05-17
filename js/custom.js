@@ -97,3 +97,12 @@ $(document).ready(function() {
     });
   }, 10)  
 });
+
+// Add animation/ Initialize Woo
+$(document).ready(function() {
+    
+    'use strict';
+   
+    new WOW().init();
+    
+});
