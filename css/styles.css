@@ -91,18 +91,18 @@ p {
 /* ========== Header ========== */
 
 .header {
-	background-image: url("../images/chicago.jpeg");
+	background-image: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)),url("../images/chicago.jpeg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 115%;
 }
 
-.header-overlay {
+/*.header-overlay {
 	background-color: rgba(31, 31, 31, .75);
 	padding-top: 80px;
 	padding-bottom: 80px;
-}
+}*/
 
 /* ========== Profile ========== */
 
@@ -120,19 +120,20 @@ p {
 	color: #129CF3;
 	text-transform: uppercase;
 	font-weight: 900;
-	font-size: 30px;
-	margin-top: 25px;
+  font-size: 30px;
+  margin-top: 25px;
 }
 
 .profile-title h4 {
-	color: #129CF3;
-	margin-top: 10px;
+  font-size: 24px;
+  color:#D8D8D8;
+  margin-top: 30px;
 }
 
 .profile-title h4 span {
-	color:#D8D8D8;
+  color: #129CF3;
+	font-size: 24px;
 	font-weight: 300;
-	font-style: italic;
 }
 
 .profile-title p {
@@ -152,10 +153,13 @@ p {
 .project-title {
 	margin-top: 0;
 }
+.project-info-container {
+  margin-bottom: 25px;
+}
 
 .header-btns {
     /*margin-top: 90px;*/
-    /*margin-bottom: 50px;*/
+    margin-bottom: 25px;
     text-align: center;
     width: 100%;
 }
@@ -207,108 +211,118 @@ p {
     padding-left: 5px;
     color: #129CF3;
 }
+/* ========= Project Image Slider ============= */
 
-/* ========= Image Slider =========*/
+/* Carousel Fading slide */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
 
-.jssorb05 {
-            position: absolute;
-        }
-        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 16px;
-            height: 16px;
-            background: url('images/b05.png') no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .jssorb05 div { background-position: -7px -7px; }
-        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
-        .jssorb05 .av { background-position: -67px -7px; }
-        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
 
-        .jssora22l, .jssora22r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 58px;
-            cursor: pointer;
-            background: url('../images/a22.png') center center no-repeat;
-            overflow: hidden;
-        }
-        .jssora22l { background-position: -10px -31px; }
-        .jssora22r { background-position: -70px -31px; }
-        .jssora22l:hover { background-position: -130px -31px; }
-        .jssora22r:hover { background-position: -190px -31px; }
-        .jssora22l.jssora22ldn { background-position: -250px -31px; }
-        .jssora22r.jssora22rdn { background-position: -310px -31px; }
-        .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
-        .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
 
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Carousel Control custom */
+.carousel-control .control-icon {
+  font-size: 48px;
+  height: 30px;
+  margin-top: -15px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  }
+  .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+  .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+
+/* Removing BS background */
+.carousel .control-box { opacity: 0; }
+a.carousel-control.left  { left: 0; background: none; border: 0;}
+a.carousel-control.right { right: 0; background: none; border: 0;}
+
+
+/* Animation */
+.control-box, a.carousel-control, .carousel-indicators li {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;   
+  /* hardware acceleration causes Bootstrap carousel controlbox margin error in webkit */
+  /* Assigning animation to indicator li will make slides flicker */
+  } 
+
+
+/* Hover animation */
+.carousel:hover .control-box { opacity: 1; }
+.carousel:hover a.carousel-control.left { left: 15px; }
+.carousel:hover a.carousel-control.right { right: 15px; }  
+
+
+/* Carouse Indicator */
+.carousel-indicators li.active,
+.carousel-indicators li { border: 0; }
+
+.carousel-indicators li {
+  background: #666;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  }
+
+.carousel-indicators li.active {
+  background: #fff;
+  margin: 0 3px;
+  }
 
 /* ========= About ============= */
-.choose-us-wraper {
-
-    padding-top: 50px;
+.about-me-img {
+  border-radius: 12px;
 }
 
-
-.choose-us-title {
-    padding-bottom: 50px;   
+.about-me-p {
+  font-size: 18px;
 }
-.choose-us-title h2 {
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 37px;
-    position: relative;
-}
-.choose-us-title h2:after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    width: 70px; 
-    height: 1px;
-    background-color: #129CF3;
-}
-
-.choose-us-title p {
-    margin-top: 40px;
-    font-size: 19px;
-    line-height: 24px;
-}
-
-.choose-us-item {
-    position: relative;
-    padding-bottom: 4px;
-    padding-left: 80px;
-}
-.choose-us-item div {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.choose-us-item div i {
-    font-size: 55px;
-    color: #129CF3;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    -moz-transition: all 1s;
-}
-.choose-us-item h3 {
- color: #343434;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.choose-us-item p {
-    color: #727272;
-    font-size: 15px;
-} 
 
 
 /* ========= Footer =========*/
@@ -319,7 +333,7 @@ p {
     border-bottom: 3px solid #129CF3;
 }
 .copyright p {
-		padding: 9px 15px;
+	padding: 9px 15px;
     color: #B5B5B5;
     font-weight: 600;
     font-size: 15px;
@@ -339,4 +353,8 @@ p {
 .scroll-top a i {
     color: #fff;
     font-size: 25px;
+}
+
+.about-me-wrapper {
+  padding-bottom: 50px;
 }

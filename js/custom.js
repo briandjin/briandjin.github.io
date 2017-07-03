@@ -106,3 +106,12 @@ $(document).ready(function() {
     new WOW().init();
     
 });
+
+// Carousel Auto-Cycle
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+  });
+
+  
