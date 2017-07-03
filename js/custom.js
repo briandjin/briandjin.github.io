@@ -97,3 +97,21 @@ $(document).ready(function() {
     });
   }, 10)  
 });
+
+// Add animation/ Initialize Woo
+$(document).ready(function() {
+    
+    'use strict';
+   
+    new WOW().init();
+    
+});
+
+// Carousel Auto-Cycle
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+  });
+
+  

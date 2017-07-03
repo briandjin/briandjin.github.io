@@ -52,7 +52,9 @@ p {
 /* =========== Navigation ============ */
 
 .navbar-default {
-    background-color: transparent;
+/*    background-color: transparent;*/
+    background-color: rgba(59, 59 , 59, 0.7);
+    opacity: 1;
     border-color: #444;
     z-index: 110;
     transition: all 1s;
@@ -89,18 +91,18 @@ p {
 /* ========== Header ========== */
 
 .header {
-	background-image: url("https://static.pexels.com/photos/167200/pexels-photo-167200.jpeg");
+	background-image: linear-gradient(rgba(31, 31, 31, 0.7), rgba(31, 31, 31, 0.7)),url("../images/chicago.jpeg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 115%;
 }
 
-.header-overlay {
+/*.header-overlay {
 	background-color: rgba(31, 31, 31, .75);
 	padding-top: 80px;
 	padding-bottom: 80px;
-}
+}*/
 
 /* ========== Profile ========== */
 
@@ -118,19 +120,20 @@ p {
 	color: #129CF3;
 	text-transform: uppercase;
 	font-weight: 900;
-	font-size: 30px;
-	margin-top: 25px;
+  font-size: 30px;
+  margin-top: 25px;
 }
 
 .profile-title h4 {
-	color: #129CF3;
-	margin-top: 10px;
+  font-size: 24px;
+  color:#D8D8D8;
+  margin-top: 30px;
 }
 
 .profile-title h4 span {
-	color:#D8D8D8;
+  color: #129CF3;
+	font-size: 24px;
 	font-weight: 300;
-	font-style: italic;
 }
 
 .profile-title p {
@@ -138,6 +141,187 @@ p {
 	font-size: 18px;
 	line-height: 27px;
 	padding-top: 50px;
+}
+
+
+
+/* ========= Project =========*/
+.project-container {
+	padding-bottom: 70px;
+}
+
+.project-title {
+	margin-top: 0;
+}
+.project-info-container {
+  margin-bottom: 25px;
+}
+
+.header-btns {
+    /*margin-top: 90px;*/
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-download,
+.btn-download:focus,
+.btn-download:active,
+.btn-download:visited
+{
+    background: transparent;
+    border-color: #129CF3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 19px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+     -o-transition: all 1s;
+}
+.btn-download:hover {
+    background-color: #129CF3;
+    color: #fff;    
+}
+.btn-tour,
+.btn-tour:focus,
+.btn-tour:active,
+.btn-tour:visited {
+    color: #A9ADB0;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 500;
+    background: transparent;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+     -o-transition: all 1s;
+    
+}
+.btn-tour:hover {
+    color: #129CF3;
+}
+.btn-tour i {
+    font-size: 20px;
+    padding-left: 5px;
+    color: #129CF3;
+}
+/* ========= Project Image Slider ============= */
+
+/* Carousel Fading slide */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
+
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Carousel Control custom */
+.carousel-control .control-icon {
+  font-size: 48px;
+  height: 30px;
+  margin-top: -15px;
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  }
+  .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+  .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+
+/* Removing BS background */
+.carousel .control-box { opacity: 0; }
+a.carousel-control.left  { left: 0; background: none; border: 0;}
+a.carousel-control.right { right: 0; background: none; border: 0;}
+
+
+/* Animation */
+.control-box, a.carousel-control, .carousel-indicators li {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;   
+  /* hardware acceleration causes Bootstrap carousel controlbox margin error in webkit */
+  /* Assigning animation to indicator li will make slides flicker */
+  } 
+
+
+/* Hover animation */
+.carousel:hover .control-box { opacity: 1; }
+.carousel:hover a.carousel-control.left { left: 15px; }
+.carousel:hover a.carousel-control.right { right: 15px; }  
+
+
+/* Carouse Indicator */
+.carousel-indicators li.active,
+.carousel-indicators li { border: 0; }
+
+.carousel-indicators li {
+  background: #666;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  }
+
+.carousel-indicators li.active {
+  background: #fff;
+  margin: 0 3px;
+  }
+
+/* ========= About ============= */
+.about-me-img {
+  border-radius: 12px;
+}
+
+.about-me-p {
+  font-size: 18px;
 }
 
 
@@ -149,7 +333,7 @@ p {
     border-bottom: 3px solid #129CF3;
 }
 .copyright p {
-		padding: 9px 15px;
+	padding: 9px 15px;
     color: #B5B5B5;
     font-weight: 600;
     font-size: 15px;
@@ -169,4 +353,8 @@ p {
 .scroll-top a i {
     color: #fff;
     font-size: 25px;
+}
+
+.about-me-wrapper {
+  padding-bottom: 50px;
 }

@@ -14,12 +14,18 @@
     <!-- favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    
+  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- responsive css -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -53,10 +59,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#HOME" class="nav-item">HOME</a></li>
-                        <li><a href="#PROJECTS" class="nav-item">PROJECTS</a></li>
-                        <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
-                        <li><a href="#CONTACT" class="nav-item">CONTACT</a></li>
+                    <li><a href="#HOME" class="nav-item">HOME</a></li>
+                    <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
+                    <li><a href="#PROJECTS" class="nav-item">PROJECTS</a></li>
                   </ul>
                       
                 </div><!-- /.navbar-collapse -->
@@ -74,12 +79,17 @@
                     <!--item 1 -->
                     <div class="profile text-center">
                         
-                        <img src="http://amandacarroll.org/wp-content/uploads/2016/05/man-testimonial.jpg" alt="header" class="center-block">
+                        <!-- Profile Picture -->
+                       <!--  <img src="https://www.ctsom.com/wp-content/uploads/2015/06/avatar-man-336x270.png" alt="header" class="center-block"> -->
                         
                         <div class="profile-title">
+                          <div class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                             <h2>Brian Jin</h2>
-                            <h4><span> Software Engineer, </span> Chicago </h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> 
+                          </div>
+                          <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                            <h4><span> Hello, </span> I am a software engineer. </h4>
+                          </div>
+                          
                         </div>
 
                     </div>
@@ -90,6 +100,58 @@
         
         </div>
 
+    </div>
+
+</section>
+
+<!-- About -->
+<section id="ABOUT">
+
+    <div class="container">
+
+        <div class="choose-us-wraper">
+            <div class="row">
+
+                <div class="col-md-10 col-md-offset-1">
+                    
+                    <div class="section-title">
+                        
+                        <h2> About Me </h2>
+
+                    </div>
+
+                </div>
+            
+                <div class="container">
+                
+                    <div class="row about-me-wrapper">
+                    
+                        <div class="col-md-6">
+                        
+                            <!-- About Me -->
+                            <div class="about-me wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+                            
+                                <img class="img-responsive about-me-img" src="images/about-me.png" alt="">
+                            
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">        
+                            
+                          <p class="about-me-p">I’ve always had a deep love for the process of building things. It challenges my philosophies of design and allows me to practice my favorite skills; creativity, empathy, and logic to solve challenging problems, communicate effectively, and prioritize concerns under real-world constraints and tradeoffs. However, I believe true wisdom comes not merely from building, but objectively evaluating and learning from the resulting success and failures. It’s a beautifully cyclical, humbling, and rewarding process that I think is crucial not only to designing and building successful products, but to developing an efficient, virtuous, and rewarding life in general.</p>
+
+                          <p class="about-me-p">The web has played a huge role in this personal development. It allowed me to discover and explore a wide range of passions, giving me the skills and confidence necessary to pursue an enduring journey of creation and learning. It’s an amazing resource for the collective wisdom of humanity and I think its vast potential to reshape our lives makes it our greatest creation since written language itself. However, the web's potential is severely limited by its accessibility to the general populace and all too often leaves behind those it could benefit most. As an ever-growing web developer, I’m excited to play a small part in making the web a more intuitive, accessible, and useful place for all the diverse people of the world.</p> 
+                                          
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+
+        </div>
     </div>
 
 </section>
@@ -106,59 +168,370 @@
                 <div class="section-title">
                     
                     <h2> Projects </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus. Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.</p>
 
                 </div>
 
             </div>
 
         </div>
+    
     </div>
 
-</section>
-<!-- About -->
-<section id="ABOUT">
+   <div class="container project-container">
 
-    <div class="container">
 
-        <div class="row">
-
-            <div class="col-md-10 col-md-offset-1">
+        <!--Project 1 -->
+        <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="col-md-3 thumbnail">                
+                <img class="img-responsive" src="images/screen-02.png" alt="">
+            </div>
+            <div class="col-md-9 project-info-container">
+                <h3 class="project-title">Padawan JS</h3>
+                <h4>Social networking platform connnecting students to mentors</h4>
+                <p>Built With: Express, Node, ReactJS, React Router, Redux, PostgreSQL, Bootstrap, Jest/Enzyme, Passport, JWT, Webpack,  </p>
+              
                 
-                <div class="section-title">
-                    
-                    <h2> About Me </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus. Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.</p>
-
-                </div>
-
             </div>
-
-        </div>
-    </div>
-
-</section>
-
-<!-- Contact -->
-<section id="CONTACT">
-
-    <div class="container">
-
+        
+        <!-- /.row -->
         <div class="row">
-
+            
             <div class="col-md-10 col-md-offset-1">
-                
-                <div class="section-title">
-                    
-                    <h2> Contact Me </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus. Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.</p>
+                <div class="header-btns">
+                    <a class="btn btn-download" href="https://padawanjs-staging.herokuapp.com/" target="_blank">Visit Page</a>
+                    <a class="btn btn-tour" role="button" data-toggle="collapse" href="#project-01" aria-expanded="false" aria-controls="collapseExample">
+                      Screen Shots
+                      <i class="fa fa-angle-down"></i>
+                    </a>
 
                 </div>
+                <div class="collapse" id="project-01">
+                    
+                    <!-- Padawan Carousel -->
+                    <section class="main-slider">
+                      <div id="carousel-01" class="carousel slide carousel-fade" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-01" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-01" data-slide-to="1"></li>
+                          <li data-target="#carousel-01" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                          <!-- Slide 1 : Active -->
+                          <div class="item active thumbnail">
+                            <img src="images/screen-01.png" alt="">
+                            
+                          </div><!-- /Slide1 -->
+
+                          <!-- Slide 2 -->
+                          <div class="item thumbnail">
+                            <img src="images/screen-02.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+
+                          <!-- Slide 3 -->
+                          <div class="item thumbnail">
+                            <img src="images/screen-03.png" alt="">
+                          </div><!-- /Slide3 -->
+
+
+                        </div><!-- /.carousel-inner -->
+
+
+                        <!-- Controls -->
+                        <div class="control-box">
+                          <a class="left carousel-control" href="#carousel-01" role="button" data-slide="prev">
+                            <span class="control-icon prev fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          
+                          <a class="right carousel-control" href="#carousel-01" role="button" data-slide="next">
+                            <span class="control-icon next fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.control-box -->
+
+
+                      </div><!-- /#carousel-01 -->
+                    </section><!-- /.main-slider -->       
+
+                </div>  
 
             </div>
-
+          
         </div>
+
+      </div>     
+
+      <hr>
+
+        <!--Project 2 -->
+        <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="col-md-3 thumbnail">                
+                <img class="img-responsive" src="images/daytripper.png" alt="">
+            </div>
+            <div class="col-md-9 project-info-container">
+                <h3 class="project-title">Day Tripper</h3>
+                <h4>Responsive itinerary planner with a custom live map rendering</h4>
+                <p>Built With: Express, Node, React, MongoDB, Material-UI, Google Maps API, Yelp API </p>
+              
+                
+            </div>
+        
+        <!-- /.row -->
+        <div class="row">
+            
+            <div class="col-md-10 col-md-offset-1">
+                <div class="header-btns">
+                    <a class="btn btn-download" href="https://mm-day-tripper.herokuapp.com/" target="_blank">Visit Page</a>
+                    <a class="btn btn-tour" role="button" data-toggle="collapse" href="#project-02" aria-expanded="false" aria-controls="collapseExample">
+                      Screen Shots
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+
+                </div>
+                <div class="collapse" id="project-02">
+                    
+                    <!-- Padawan Carousel -->
+                    <section class="main-slider">
+                      <div id="carousel-02" class="carousel slide carousel-fade" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-02" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-02" data-slide-to="1"></li>
+                          <li data-target="#carousel-02" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                          <!-- Slide 1 : Active -->
+                          <div class="item active thumbnail">
+                            <img src="images/daytripper-01.png" alt="">
+                            
+                          </div><!-- /Slide1 -->
+
+                          <!-- Slide 2 -->
+                          <div class="item thumbnail">
+                            <img src="images/daytripper.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+
+                        </div><!-- /.carousel-inner -->
+
+
+                        <!-- Controls -->
+                        <div class="control-box">
+                          <a class="left carousel-control" href="#carousel-02" role="button" data-slide="prev">
+                            <span class="control-icon prev fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          
+                          <a class="right carousel-control" href="#carousel-02" role="button" data-slide="next">
+                            <span class="control-icon next fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.control-box -->
+
+
+                      </div><!-- /#carousel-01 -->
+                    </section><!-- /.main-slider -->       
+
+                </div>  
+
+            </div>
+          
+        </div>
+
+      </div>     
+
+      <hr>
+
+        <!--Project 3 -->
+        <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="col-md-3 thumbnail">                
+                <img class="img-responsive" src="images/FamiliHR.png" alt="">
+            </div>
+            <div class="col-md-9 project-info-container">
+                <h3 class="project-title">FamiliHR</h3>
+                <h4>Interactive spaced repetition learning game</h4>
+                <p>Express, Node, React, MongoDB, Semantic-UI, Google Sheets API </p>
+              
+                
+            </div>
+        
+        <!-- /.row -->
+        <div class="row">
+            
+            <div class="col-md-10 col-md-offset-1">
+                <div class="header-btns">
+                    <a class="btn btn-download" href="https://mm-familihr.herokuapp.com" target="_blank">Visit Page</a>
+                    <a class="btn btn-tour" role="button" data-toggle="collapse" href="#project-03" aria-expanded="false" aria-controls="collapseExample">
+                      Screen Shots
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+
+                </div>
+                <div class="collapse" id="project-03">
+                    
+                    <!-- Padawan Carousel -->
+                    <section class="main-slider">
+                      <div id="carousel-03" class="carousel slide carousel-fade" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-03" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-03" data-slide-to="1"></li>
+                          <li data-target="#carousel-03" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                          <!-- Slide 1 : Active -->
+                          <div class="item active thumbnail">
+                            <img src="images/FamiliHR-03.png" alt="">
+                            
+                          </div><!-- /Slide1 -->
+
+                          <!-- Slide 2 -->
+                          <div class="item thumbnail">
+                            <img src="images/FamiliHR-02.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+
+                          <div class="item thumbnail">
+                            <img src="images/FamiliHR-04.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+                        </div><!-- /.carousel-inner -->
+
+
+                        <!-- Controls -->
+                        <div class="control-box">
+                          <a class="left carousel-control" href="#carousel-03" role="button" data-slide="prev">
+                            <span class="control-icon prev fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          
+                          <a class="right carousel-control" href="#carousel-03" role="button" data-slide="next">
+                            <span class="control-icon next fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.control-box -->
+
+
+                      </div><!-- /#carousel-01 -->
+                    </section><!-- /.main-slider -->       
+
+                </div>  
+
+            </div>
+          
+        </div>
+
+      </div>     
+
+      <hr>
+
+        <!--Project 4 -->
+        <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="col-md-3 thumbnail">                
+                <img class="img-responsive" src="images/omnifoods.png" alt="">
+            </div>
+            <div class="col-md-9 project-info-container">
+                <h3 class="project-title">OmniFoods</h3>
+                <h4>Healthy food subscription service.</h4>
+                <p>Built With: Javascript, HTML5, CSS</p>
+              
+                
+            </div>
+        
+        <!-- /.row -->
+        <div class="row">
+            
+            <div class="col-md-10 col-md-offset-1">
+                <div class="header-btns">
+                    
+                    <a class="btn btn-tour" role="button" data-toggle="collapse" href="#project-04" aria-expanded="false" aria-controls="collapseExample">
+                      Screen Shots
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+
+                </div>
+                <div class="collapse" id="project-04">
+                    
+                    <!-- Padawan Carousel -->
+                    <section class="main-slider">
+                      <div id="carousel-04" class="carousel slide carousel-fade" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-04" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-04" data-slide-to="1"></li>
+                          <li data-target="#carousel-04" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                          <!-- Slide 1 : Active -->
+                          <div class="item active thumbnail">
+                            <img src="images/omnifoods-02.png" alt="">
+                            
+                          </div><!-- /Slide1 -->
+
+                          <!-- Slide 2 -->
+                          <div class="item thumbnail">
+                            <img src="images/omnifoods-03.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+
+                          <div class="item thumbnail">
+                            <img src="images/omnifoods-04.png" alt="">
+                            
+                          </div><!-- /Slide2 -->
+                        </div><!-- /.carousel-inner -->
+
+
+                        <!-- Controls -->
+                        <div class="control-box">
+                          <a class="left carousel-control" href="#carousel-04" role="button" data-slide="prev">
+                            <span class="control-icon prev fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          
+                          <a class="right carousel-control" href="#carousel-04" role="button" data-slide="next">
+                            <span class="control-icon next fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div><!-- /.control-box -->
+
+
+                      </div><!-- /#carousel-01 -->
+                    </section><!-- /.main-slider -->       
+
+                </div>  
+
+            </div>
+          
+        </div>
+
+      </div>     
+
+      <hr>
+     
     </div>
+    <!-- /.container -->
 
 </section>
 
@@ -177,9 +550,9 @@
             </div>
             <div class="col-md-6">
             
-                    <div class="scroll-top">
-                        <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-                    </div>
+                <div class="scroll-top">
+                    <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+                </div>
             </div>
         
         
@@ -196,6 +569,8 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- Custom JS-->
 <script type="text/javascript" src="js/custom.js"></script>
+<!-- Add wow js lib -->
+<script src="js/wow.min.js"></script>
 
 </body>
 </html>
